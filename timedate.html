@@ -3,7 +3,7 @@
     <title>Date Widget Notion</title> 
     <style>
       #lbl {
-        display: flex-end;
+        display: flex;
         font-family: times new roman;
         font-size: 18pt;
         color: #45612f;
@@ -17,8 +17,8 @@
       }
 
       #container {
-        display: flex-end;
-        align-items: flex-end;
+        display: flex;
+        align-items: flex-start;
       }
 
       #date{
@@ -66,8 +66,9 @@
 
     document.getElementById('lbl').innerHTML = `
         <div class="container">
-          <div id="date"> ${date}</div>
           <div class="greeting">${greet}</div>
+          <div id="date"> ${date}</div>
+       
         <div/>
     `;
 </script> 
