@@ -40,7 +40,7 @@ h1 {
 .card {
     padding: 10px 25px 10px 25px;
     border-radius: 10px;
-    background: #553c4e;
+    background: #FFFFFF;
     width: 85vw;
     color: #fff;
     display: inline-block;
@@ -54,7 +54,7 @@ h1 {
 
 .clock {
     display: inline;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Times New Roman';
     font-size: 2em;
    
 }
@@ -72,14 +72,14 @@ h1 {
 .date {
     display: inline;
     min-width: 162px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Times New Roman';
     font-size: 2em;
     padding-right: 30px;
 }
 .greet{
     
     display:inline;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Times New Roman';
     font-size: 2rem;
      padding-right: 30px;
 }
@@ -124,6 +124,19 @@ if(today.getHours() >=12){
 }
 else{
     seconds+=" am"
+}
+hrs = today.getHours();
+if (hrs < 12)
+        greet = 'Good Morning  ';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon ';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening  ';
+// console.log(today.toLocaleTimeString());
+document.getElementById('greet').innerHTML = greet;
+document.getElementById('hour').innerHTML = hour;
+document.getElementById('min').innerHTML = minutes;
+document.getElementById('sec').innerHTML = seconds;
 }
 
 function twelveHour(hour) {
